@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { SkipToContent } from './components/SkipToContent';
 import { Home } from './pages/Home';
 import { Experiences } from './pages/Experiences';
 import { RequestExperience } from './pages/RequestExperience';
@@ -11,8 +12,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen flex flex-col">
+        <SkipToContent />
         <Header />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" role="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/experiences" element={<Experiences />} />

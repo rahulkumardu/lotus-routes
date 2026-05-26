@@ -3,53 +3,156 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12" role="contentinfo">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h3 className="mb-4">Logo</h3>
-            <nav className="space-y-2">
-              <Link to="/" className="block text-gray-400 hover:text-white transition-colors">Home</Link>
-              <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">About</Link>
-              <Link to="/experiences" className="block text-gray-400 hover:text-white transition-colors">Experiences</Link>
+          <section aria-labelledby="footer-navigation">
+            <h3 id="footer-navigation" className="mb-4">Navigation</h3>
+            <nav aria-label="Footer navigation">
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    to="/"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/about"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/experiences"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    Experiences
+                  </Link>
+                </li>
+              </ul>
             </nav>
-          </div>
+          </section>
 
-          <div>
-            <h3 className="mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
-            </ul>
-          </div>
+          <section aria-labelledby="footer-support">
+            <h3 id="footer-support" className="mb-4">Support</h3>
+            <nav aria-label="Support links">
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    FAQs
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
 
-          <div>
-            <h3 className="mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
-            </ul>
-          </div>
+          <section aria-labelledby="footer-legal">
+            <h3 id="footer-legal" className="mb-4">Legal</h3>
+            <nav aria-label="Legal links">
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block"
+                  >
+                    Cookie Policy
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
 
-          <div>
-            <h3 className="mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                <Linkedin className="h-6 w-6" />
-              </a>
-            </div>
-          </div>
+          <section aria-labelledby="footer-social">
+            <h3 id="footer-social" className="mb-4">Follow Us</h3>
+            <nav aria-label="Social media links">
+              <ul className="flex gap-4">
+                <li>
+                  <a
+                    href="https://facebook.com"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block p-1"
+                    aria-label="Visit our Facebook page"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block p-1"
+                    aria-label="Visit our Twitter page"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Twitter className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block p-1"
+                    aria-label="Visit our Instagram page"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com"
+                    className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md inline-block p-1"
+                    aria-label="Visit our LinkedIn page"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">

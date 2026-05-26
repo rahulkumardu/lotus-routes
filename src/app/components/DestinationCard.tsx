@@ -12,7 +12,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ title, instructor, description, imageUrl, imageAlt, type }: ExperienceCardProps) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+    <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
       <div className="aspect-[4/3] overflow-hidden">
         <ImageWithFallback
           src={imageUrl}
@@ -21,19 +21,20 @@ export function ExperienceCard({ title, instructor, description, imageUrl, image
         />
       </div>
       <div className="p-6">
-        <div className="inline-block px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm mb-3">
+        <span className="inline-block px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm mb-3" aria-label={`Category: ${type}`}>
           {type}
-        </div>
+        </span>
         <h3 className="text-xl mb-1 text-gray-900">{title}</h3>
         <p className="text-sm text-gray-500 mb-3">with {instructor}</p>
         <p className="text-gray-600 mb-4">{description}</p>
         <Link
           to="/request"
-          className="text-teal-600 hover:text-teal-700 transition-colors inline-block"
+          className="text-teal-600 hover:text-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 rounded-md transition-colors inline-block"
+          aria-label={`Book ${title} experience with ${instructor}`}
         >
           Book Experience →
         </Link>
       </div>
-    </div>
+    </article>
   );
 }
