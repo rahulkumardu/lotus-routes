@@ -7,6 +7,13 @@ import { Experiences } from './pages/Experiences';
 import { RequestExperience } from './pages/RequestExperience';
 import { Confirmation } from './pages/Confirmation';
 import { About } from './pages/About';
+import { HelpCenter } from './pages/HelpCenter';
+import { ContactUs } from './pages/ContactUs';
+import { FAQs } from './pages/FAQs';
+import { TermsOfService } from './pages/TermsOfService';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { CookiePolicy } from './pages/CookiePolicy';
+import { EveningWithMusician } from './pages/EveningWithMusician';
 
 export default function App() {
   return (
@@ -21,6 +28,13 @@ export default function App() {
             <Route path="/request" element={<RequestExperience />} />
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/about" element={<About />} />
+            <Route path="/help" element={<HelpCenter />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/faqs" element={<FAQs />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
+            <Route path="/experiences/evening-with-musician" element={<EveningWithMusician />} />
           </Routes>
         </main>
         <Footer />
